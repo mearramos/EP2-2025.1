@@ -49,6 +49,20 @@ def calcula_pontos_regra_simples(rolados):
     return retorno
 # print(calcula_pontos_regra_simples([2, 3, 4, 5, 2]))
 
+def calcula_pontos_soma(rolados):
+    i = 0
+    soma = 0
+    nrolados = len(rolados)    
+
+    while i < nrolados:
+        soma += rolados[i]
+        i += 1
+    return soma
+# print(calcula_pontos_soma([2, 3, 4, 5, 2]))
+
+
+
+
 
 
 
