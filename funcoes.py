@@ -43,4 +43,12 @@ def remover_dado(rolados, guardados, removido):
 # dado_para_remover = 0
 
 # print(remover_dado(dados_rolados, dados_no_estoque, dado_para_remover))
-    
+
+def calcula_pontos_regra_simples(rolados):
+    retorno = {face: rolados.count(face) * face for face in range(1,7)}
+    return retorno
+# print(calcula_pontos_regra_simples([2, 3, 4, 5, 2]))
+
+
+
+
