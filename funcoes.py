@@ -60,6 +60,32 @@ def calcula_pontos_soma(rolados):
     return soma
 # print(calcula_pontos_soma([2, 3, 4, 5, 2]))
 
+def calcula_pontos_sequencia_baixa(rolados):
+    i = 0
+    while i < len(rolados):
+        atual = rolados[i]
+        tem1 = False
+        tem2 = False
+        tem3 = False
+
+        j = 0
+        while j < len(rolados):
+            if rolados[j] == atual + 1:
+                tem1 = True
+            if rolados[j] == atual + 2:
+                tem2 = True
+            if rolados[j] == atual + 3:
+                tem3 = True
+            j += 1
+
+        if tem1 and tem2 and tem3:
+            return 15
+
+        i += 1
+
+    return 0
+# print(calcula_pontos_sequencia_baixa([2, 3, 4, 6, 2]))
+
 
 
 
