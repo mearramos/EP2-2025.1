@@ -86,6 +86,33 @@ def calcula_pontos_sequencia_baixa(rolados):
     return 0
 # print(calcula_pontos_sequencia_baixa([2, 3, 4, 6, 2]))
 
+def calcula_pontos_sequencia_alta(dado):
+    unico = list(set(dado))
+    pontos = 0
+
+    pontuacao =  [
+        [1, 2, 3, 4, 5],
+        [2, 3, 4, 5, 6]
+    ]
+
+    for sequencia in pontuacao:
+        existe = True
+
+        for numero in sequencia:
+            if numero not in unico:
+                existe = False
+                break
+        if existe:
+            pontos = 30
+            return pontos
+    return pontos
+
+# print(calcula_pontos_sequencia_alta([5, 4, 1, 3, 2, 1]))
+
+
+
+
+
 
 
 
