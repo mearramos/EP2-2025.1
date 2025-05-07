@@ -185,12 +185,3 @@ def calcula_pontos_quina(lista):
     return 0
 
 # print(calcula_pontos_quina([5, 2, 5, 5, 5, 5]))
-
-
-
-
-
-
-
-
-
