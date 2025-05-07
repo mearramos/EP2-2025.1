@@ -182,9 +182,29 @@ def calcula_pontos_quina(lista):
         if contagem[i] >= 5:
             return 50
     
+    
     return 0
 
 # print(calcula_pontos_quina([5, 2, 5, 5, 5, 5]))
+
+
+def calcula_pontos_regra_avancada(dados):
+    full    = calcula_pontos_full_house(dados)
+    quadra  = calcula_pontos_quadra(dados)
+    quina   = calcula_pontos_quina(dados)
+    baixa   = calcula_pontos_sequencia_baixa(dados)
+    alta    = calcula_pontos_sequencia_alta(dados)
+    soma    = calcula_pontos_soma(dados)
+
+    return {
+        'cinco_iguais'     : quina,
+        'full_house'       : full,
+        'quadra'           : quadra,
+        'sequencia_baixa'  : baixa,
+        'sequencia_alta'   : alta,
+        'sem_combinacao'   : soma
+    }
+
 
 
 
