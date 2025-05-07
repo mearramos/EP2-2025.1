@@ -109,6 +109,32 @@ def calcula_pontos_sequencia_alta(dado):
 
 # print(calcula_pontos_sequencia_alta([5, 4, 1, 3, 2, 1]))
 
+def calcula_pontos_full_house(lista):
+    pontuacao = 0
+    quantidade = len(lista)
+    tira_repetido = list(set(lista))
+
+    if len(tira_repetido) < 2:
+        return pontuacao
+    
+    dicio = {}
+    i = 0
+
+    while i < quantidade:
+        if lista[i] not in dicio:
+            dicio[lista[i]] = 1
+        else:
+            dicio[lista[i]] += 1
+
+        pontuacao += lista[i]
+        i += 1
+
+    if 3 in dicio.values() and 2 in dicio.values():
+        return pontuacao
+    
+    return 0 
+
+# print(calcula_pontos_full_house([5, 2, 5, 5, 2]))
 
 
 
