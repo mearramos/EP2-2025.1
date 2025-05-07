@@ -160,6 +160,32 @@ def calcula_pontos_quadra(lista):
 
 # print(calcula_pontos_quadra([5, 2, 5, 5, 5, 1]))
 
+def calcula_pontos_quina(lista):
+    unico = []
+    contagem = []
+
+    for i in range(len(lista)):
+        valor = lista[i]
+        achado = False
+
+        for k in range(len(unico)):
+            if unico[k] == valor:
+                contagem[k] += 1
+                achado = True
+                break
+
+        if not achado:
+            unico.append(valor)
+            contagem.append(1)
+
+    for i in range(len(contagem)):
+        if contagem[i] >= 5:
+            return 50
+    
+    return 0
+
+# print(calcula_pontos_quina([5, 2, 5, 5, 5, 5]))
+
 
 
 
