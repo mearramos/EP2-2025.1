@@ -136,6 +136,29 @@ def calcula_pontos_full_house(lista):
 
 # print(calcula_pontos_full_house([5, 2, 5, 5, 2]))
 
+def calcula_pontos_quadra(lista):
+    pontuacao = 0
+    quantidade = len(lista)
+
+    dicio = {}
+    i = 0
+
+    while i < quantidade:
+        if lista[i] not in dicio:
+            dicio[lista[i]] = 1
+        else:
+            dicio[lista[i]] += 1
+
+        pontuacao += lista[i]
+        i += 1
+
+    for repeticao in dicio.values():
+        if repeticao >= 4:
+            return pontuacao
+    
+    return 0
+
+# print(calcula_pontos_quadra([5, 2, 5, 5, 5, 1]))
 
 
 
